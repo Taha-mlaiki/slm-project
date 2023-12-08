@@ -1,0 +1,131 @@
+
+*{
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+body {
+  padding:10px 5px;
+}
+.main-color {
+  background-color: #338a93;
+}
+.read-the-docs {
+  color: #888;
+}
+.landing {
+  position: relative;
+  height: calc(100vh - 20px);
+  color:white;
+  /* border-bottom-right-radius: 900px; */
+}
+.landing h3 {
+  position: absolute;
+  top:50px;
+  left:10%;
+  font-weight: bold;
+}
+.landing h1 {
+  position: absolute;
+  top:37%;
+  left:25%;
+  transform: translateX(-30%);
+  font-size:50px;
+  font-weight: bold;
+}
+.landing .social {
+  position: absolute;
+  bottom:50px;
+  left:30%;
+  transform: translateX(-50%);
+}
+.landing .social i {
+  margin-right:20px;
+  font-size: 25px;
+}
+.landing::after {
+  position: absolute;
+  content:"";
+  border-top: solid transparent;
+  border-left:200px solid transparent;
+  border-bottom: calc(100vh - 20px)  solid white;
+  right:0
+}
+.inscription h3 { 
+    font-weight: bolder;
+    position: relative;
+    margin-top:30px;
+}
+.inscription h3 i {
+  position:absolute;
+  right:30px;
+  color:#a6a6a6
+}
+.inscription .camera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:25px;
+  padding:0 30px;
+}
+.inscription p {
+  text-align: center;
+}
+.inscription .camera i {
+  width: 90px;
+  height: 90px;
+  background-color: #d9d9d9;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color:#646464;
+  
+}
+.inscription p {
+  color:#727272
+}
+
+.input {
+  font-size:14px;
+  flex-basis: 40%;
+
+}
+ input,select{
+  border:none;
+  border-bottom:2px solid #adadad;
+  outline:none;
+  width: 100%;
+
+ 
+}
+label {
+  color: #808080;
+  font-size:14px;
+}
+@media (max-width:786px) {
+  .input {
+    flex-basis: 100%;
+    margin-bottom:25px;
+  }
+}
+form button {
+  border:none;
+  padding:7px;
+  color:white;
+  background-color: #4e98a1;
+  border-radius: 7px;
+  transition: 0.3s;
+  width: 100%;
+  
+}
+form button:hover {
+  background-color: #338a93;
+}
+p span {
+  color:#338a93;
+  cursor:pointer;
+  text-decoration: underline;
+}
