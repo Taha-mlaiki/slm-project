@@ -6,9 +6,9 @@ return (
         <h3>DAKHLIYA LIK</h3>
         <h1>BIENVENUE!</h1>
         <div className="social">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-twitter"></i>
+        <i className="fa-brands fa-facebook"></i>
+        <i className="fa-brands fa-instagram"></i>
+        <i className="fa-brands fa-twitter"></i>
         </div>
     </div>
 )

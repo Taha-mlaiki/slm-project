@@ -1,18 +1,27 @@
 import React from 'react'
 
-const Forms = () => {
-  return (
-        <form className=''>
+const Forms = ({submit,setFormData,formData}) => {
+
+    function hundelChange(e){
+        const {name,value} = e.target;
+        setFormData((prev)=> ({
+            ...prev,
+            [name]:value
+        }))
+    }
+
+return (
+        <form className=''onSubmit={submit}>
             <div className="row mb-3">
                 <div className="input col-sm-6">
                     <label className='w-100' htmlFor="name">Nom <br />
-                        <input type="text" />
+                        <input value={formData.firstName} name='firstName' onChange={(e)=> hundelChange(e)} type="text" />
                     </label>
                     
                 </div>
                 <div className="input col-sm-6 ms-auto">
                     <label className='w-100' htmlFor="Prenom">Prenom <br />
-                        <input type="text" />
+                        <input value={formData.lastName} name='lastName' onChange={(e)=> hundelChange(e)} type="text" />
                     </label>
                     
                 </div>
@@ -54,10 +63,9 @@ const Forms = () => {
                 </div>
                 <div className="input col-sm-6 ms-auto">
                     <label className='w-100' htmlFor="Telephone">Genre <br />
-                        <select name="" id="">Genre
+                        <select defaultValue={"homme"} name="genre" id="">Genre
                             <option value="homme">Homme</option>
                             <option value="homme">Femme</option>
-                            <option value="homme">Gay</option>
                         </select>
                     </label>
                     
@@ -72,7 +80,7 @@ const Forms = () => {
                 <div className="col-12">
                 <label className='w-100' htmlFor="cin"> <br />
                         <select name="" id="">
-                            <option selected>--choisir filier--</option>
+                            <option >--choisir filier--</option>
                             <option value="filier 1">filier 1</option>
                             <option value="filier 2">filier 2</option>
                             <option value="filier 3">filier 3</option>
